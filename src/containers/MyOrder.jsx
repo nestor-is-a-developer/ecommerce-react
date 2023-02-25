@@ -26,7 +26,7 @@ const MyOrder = () => {
 				))}
 				<div className="order">
 					<p>
-						<span>Total</span>
+						<span>Total order</span>
 					</p>
 					<p>${sumTotal()}</p>
 				</div>
