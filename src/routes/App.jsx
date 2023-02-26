@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { HashRouter, BrowserRouter, Routes, Route} from 'react-router-dom';
 import Layout from '../containers/Layout';
 import Home from '../pages/Home';
 import Login from '../pages/Login';
@@ -19,22 +19,22 @@ const App = () => {
 	const initialState = useInitialState();
 	return (
 		<AppContext.Provider value={initialState}>
-			<BrowserRouter basename='/ecommerce-react'>
+			<HashRouter>
 				<Layout>
 					<Routes>
-						<Route exact path="/" element= {<Home/>}/>
-						<Route exact path="/login" element={<Login/>}/>
-						<Route exact path="/password-recovery" element={<PasswordRecovery/>}/>
-						<Route exact path="/send-email" element={<SendEmail/>} />
-						<Route exact path="/new-password" element={<NewPassword/>} />
-						<Route exact path="/account" element={<MyAccount/>} />
-						<Route exact path="/signup" element={<CreateAccount/>} />
-						<Route exact path="/checkout" element={<Checkout/>} />
-						<Route exact path="/orders" element={<Orders/>} />
+						<Route exact path="#/" element= {<Home/>}/>
+						<Route exact path="#/login" element={<Login/>}/>
+						<Route exact path="#/password-recovery" element={<PasswordRecovery/>}/>
+						<Route exact path="#/send-email" element={<SendEmail/>} />
+						<Route exact path="#/new-password" element={<NewPassword/>} />
+						<Route exact path="#/account" element={<MyAccount/>} />
+						<Route exact path="#/signup" element={<CreateAccount/>} />
+						<Route exact path="#/checkout" element={<Checkout/>} />
+						<Route exact path="#/orders" element={<Orders/>} />
 						<Route path="*" element={<NotFound/>}/>
 					</Routes>
 				</Layout>
-			</BrowserRouter>
+			</HashRouter>
 		</AppContext.Provider>
 	);
 }
