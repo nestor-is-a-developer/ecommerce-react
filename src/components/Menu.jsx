@@ -6,13 +6,13 @@ const Menu = () => {
 		<div className="Menu">
 			<ul>
 				<li>
-					<a href="/" className="title">My orders</a>
+					<a href="/ecommerce-react" className="title">My orders</a>
 				</li>
 				<li>
-					<a href="/">My account</a>
+					<a href="/ecommerce-react">My account</a>
 				</li>
 				<li>
-					<a href="/">Sign out</a>
+					<a href="/ecommerce-react">Sign out</a>
 				</li>
 			</ul>
 		</div>

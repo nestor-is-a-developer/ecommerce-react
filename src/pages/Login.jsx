@@ -4,10 +4,10 @@ import '../styles/Login.scss';
 const Login = () => {
 	const form = useRef(null);
 
-	//FormData es parte de javascript y es una forma segura de capturar datos de un form para enviarlos al back
 	const handleSubmit = (event) => {
 		//Evitar que se produzca el comportamiento standard de HTML, que cuando se le da submit a un form, redireccion al action="/"
 		event.preventDefault();
+		//FormData es parte de javascript y es una forma segura de capturar datos de un form para enviarlos al back
 		const formData = new FormData(form.current);
 		const data = {
 			username: formData.get('email'),
@@ -28,7 +28,7 @@ const Login = () => {
 					<button onClick={handleSubmit} className="primary-button login-button">
 						Log in
 					</button>
-					<a href="/">Forgot my password</a>
+					<a href="/ecommerce-react">Forgot my password</a>
 				</form>
 				<button className="secondary-button signup-button">
 					Sign up
